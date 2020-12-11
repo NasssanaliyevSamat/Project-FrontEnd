@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3198f379-a96a-465d-ab1d-170b25431b33" name="Default Changelist" comment="Add get methods for single product and single product from same category? ICart, ICartServer, IProduct, IServerResponce">
+    <list default="true" id="3198f379-a96a-465d-ab1d-170b25431b33" name="Default Changelist" comment="Add services for cart and orders, local storage for cart service data, add product to cart method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/interfaces/ICart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/interfaces/ICart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/interfaces/IServerResponce.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/interfaces/IServerResponse.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/cart.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607625678733</updated>
       <workItem from="1607625680324" duration="146000" />
-      <workItem from="1607626020573" duration="33782000" />
+      <workItem from="1607626020573" duration="39035000" />
     </task>
     <task id="LOCAL-00001" summary="Start frontend">
       <created>1607626128317</created>
@@ -101,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607704942620</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add services for cart and orders, local storage for cart service data, add product to cart method">
+      <created>1607724009574</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607724009575</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +129,7 @@
     <MESSAGE value="Add free template for visual pieces" />
     <MESSAGE value="Add get request for products, grid for products, link for product" />
     <MESSAGE value="Add get methods for single product and single product from same category? ICart, ICartServer, IProduct, IServerResponce" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add get methods for single product and single product from same category? ICart, ICartServer, IProduct, IServerResponce" />
+    <MESSAGE value="Add services for cart and orders, local storage for cart service data, add product to cart method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add services for cart and orders, local storage for cart service data, add product to cart method" />
   </component>
 </project>

@@ -7,8 +7,10 @@ import {environment} from '../../environments/environment';
 import {ICart, ICartServerResponse} from '../interfaces/ICart';
 // reactive JS library which contain useful methods and operators
 import {BehaviorSubject} from 'rxjs';
-import {Router} from '@angular/router';
+
+import {NavigationExtras, Router} from '@angular/router';
 import {IProduct} from '../interfaces/IProduct';
+import {IOrderResponse} from '../interfaces/IOrderResponse';
 
 
 @Injectable({
@@ -43,6 +45,7 @@ export class CartService {
   constructor(private http: HttpClient,
               private productService: ProductService,
               private orderService: OrdersService,
+              private orderResponse: IOrderResponse,
               private router: Router) {
     // предпологаем константное состояние корзины
     this.cartTotal$.next(this.cartDataServer.total);
@@ -152,11 +155,153 @@ export class CartService {
 
 
     });
+  }
+  // tslint:disable-next-line:typedef
+  updateCartItems(index: number, increase: boolean){
+    const data = this.cartDataServer.d[index]; // store product that index
 
+    if (increase)
+    {
+      data.numberInCart < data.product.quantity ? data.numberInCart++ : data.product.quantity; // trinary operator if/else
+      this.cartDataClient.dd[index].inCount = data.numberInCart; // update to new value
 
+      // to do calculate total amount
+      this.cartDataClient.totall = this.cartDataServer.total;
+      localStorage.setItem('cart', JSON.stringify(this.cartDataClient));
+      this.carDataObservable$.next({... this.cartDataServer});
+    }
+    else
+    {
+      data.numberInCart--; // decrease
 
-
-    // Thirdly
+      if (data.numberInCart < 1)
+      {
+        // to do delete product from cart
+        this.carDataObservable$.next({... this.cartDataServer});
+      }
+      else
+      {
+        this.carDataObservable$.next({... this.cartDataServer});
+        this.cartDataClient.dd[index].inCount = data.numberInCart;
+        // to do calculate total amount
+        this.cartDataClient.totall = this.cartDataServer.total;
+        localStorage.setItem('cart', JSON.stringify(this.cartDataClient));
+        this.carDataObservable$.next({... this.cartDataServer});
+      }
+    }
   }
 
+  // tslint:disable-next-line:typedef
+  deleteProductFromCart(index: number)
+  {
+    if ( window.confirm('Are you really want to remove this amazing item ?'))
+    {
+      this.cartDataServer.d.splice(index, 1);
+      this.cartDataClient.dd.splice(index, 1);
+      // to do calculate total amount
+      this.cartDataClient.totall = this.cartDataServer.total;
+      localStorage.setItem('cart', JSON.stringify(this.cartDataClient));
+
+      if (this.cartDataClient.totall === 0 ) // we are reset
+      {
+        this.cartDataClient = {
+          totall: 0,
+          dd: [{
+            id: 0,
+            inCount: 0
+          }]
+        };
+        localStorage.setItem('cart', JSON.stringify(this.cartDataClient)); // update local storage
+      }
+      else
+      {
+        localStorage.setItem('cart', JSON.stringify(this.cartDataClient)); // update local storage
+      }
+
+      if (this.cartDataServer.total === 0)// we are reset
+      {
+        this.cartDataServer = {
+          total: 0,
+          d: [{
+            product: undefined,
+            numberInCart: 0
+          }]
+        };
+        this.carDataObservable$.next({... this.cartDataServer});
+      }
+      else
+      {
+        this.carDataObservable$.next({... this.cartDataServer});
+      }
+
+
+    }
+    else // because confirm < Cancel > we don't delete a product from cart
+    {
+      return;
+    }
+  }
+
+  // tslint:disable-next-line:typedef
+  calculateProduct() // calculate total price of product from cart
+  {
+    let Total = 0;
+
+    this.cartDataServer.d.forEach(p => {
+      const {numberInCart} = p; // esx destruct method
+      const {price} = p.product;
+      // @ts-ignore
+      Total += numberInCart * price;
+    });
+    this.cartDataServer.total = Total;
+    this.cartTotal$.next(this.cartDataServer.total);
+  }
+
+  // tslint:disable-next-line:typedef
+  checOut(userId: number)
+  {
+    this.http.post(`${this.url}/orders/payment`, null).subscribe((res: {success: boolean}) => {
+      if (res.success) {
+      this.resetCart();
+      this.http.post(`${this.url}/orders/new`, {
+        userId: userId,
+        products: this.cartDataClient.dd
+      }).subscribe((data: IOrderResponse) => {
+        this.orderService.getOneOrder(data.order_id).then(prods => { // 1 order contains some products
+          if (data.success)
+          {
+            const navigateSuccess: NavigationExtras = {
+              state: { // define parameters
+                massage: data.message,
+                products: prods,
+                order_id: data.order_id,
+                total: this.cartDataClient.totall
+              }
+            };
+            this.router.navigate(['/succes'], navigateSuccess).then(p => {
+              this.cartDataClient = {dd: [{inCount: 0, id: 0}], totall: 0};
+              this.cartTotal$.next(0);
+              localStorage.setItem('cart', JSON.stringify(this.cartDataClient));
+            });
+          }
+        });
+
+      });
+      }
+    });
+  }
+
+  // tslint:disable-next-line:typedef
+  resetCart()
+  {
+    this.cartDataServer = {
+      total: 0,
+      d: [{
+        product: undefined,
+        numberInCart: 0
+      }]
+    };
+    this.carDataObservable$.next({... this.cartDataServer});
+  }
 }
+
