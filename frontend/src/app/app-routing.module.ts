@@ -5,6 +5,7 @@ import {ProductComponent} from './product/product.component';
 import {CheckoutComponent} from './checkout/checkout.component';
 import {SuccessComponent} from './success/success.component';
 import {NotFoundComponent} from './not-found/not-found.component';
+import {CartComponent} from './cart/cart.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,9 @@ const routes: Routes = [
   },
   {
     path: 'success', component: SuccessComponent
+  },
+  {
+    path: 'cart', component: CartComponent
   },
   {
     path: '**', component: NotFoundComponent

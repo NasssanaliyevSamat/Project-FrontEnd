@@ -15,6 +15,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HttpClientModule,
     MatCardModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

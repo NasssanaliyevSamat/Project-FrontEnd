@@ -4,84 +4,8 @@
   <div class="container">
     <!-- row -->
     <div class="row">
-      <!-- shop -->
-      <div class="col-md-4 col-xs-6">
-        <div class="shop">
-          <div class="shop-img">
-            <img src="./assets/img/shop01.png" alt="">
-          </div>
-          <div class="shop-body">
-            <h3>Laptop<br>Collection</h3>
-            <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- /shop -->
-
-      <!-- shop -->
-      <div class="col-md-4 col-xs-6">
-        <div class="shop">
-          <div class="shop-img">
-            <img src="./assets/img/shop03.png" alt="">
-          </div>
-          <div class="shop-body">
-            <h3>Accessories<br>Collection</h3>
-            <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- /shop -->
-
-      <!-- shop -->
-      <div class="col-md-4 col-xs-6">
-        <div class="shop">
-          <div class="shop-img">
-            <img src="./assets/img/shop02.png" alt="">
-          </div>
-          <div class="shop-body">
-            <h3>Cameras<br>Collection</h3>
-            <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- /shop -->
-    </div>
-    <!-- /row -->
-  </div>
-  <!-- /container -->
-</div>
-<!-- /SECTION -->
-
-<!-- SECTION -->
-<div class="section">
-  <!-- container -->
-  <div class="container">
-    <!-- row -->
-    <div class="row">
-
-      <!-- section title -->
-<!--      <div class="col-md-12">-->
-<!--        <div class="section-title">-->
-<!--            -->
-<!--        </div>-->
-<!--      </div>-->
-      <!-- /section title -->
-
-      <!-- Products tab & slick -->
-<!--      <div class="col-md-12">-->
-<!--        <div   *ngFor="let product of products">-->
-<!--          <div class="card my-2">-->
-<!--            <img [src]="product.image" alt="{{product.name}}" width="180px" class="card-img-top" style="cursor: pointer;">-->
-<!--            <div class="card-header">-->
-<!--              <div class="card-title">-->
-<!--              <p>{{product.name}}</p>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-      <mat-grid-list cols = "2">
-        <mat-grid-tile *ngFor="let product of products">
+      <mat-grid-list cols = "2" rowHeight="666px">
+        <mat-grid-tile *ngFor="let product of products" >
           <mat-card-header>
           </mat-card-header>
           <mat-card  class="mat-card mat-focus-indicator example-card">
@@ -93,8 +17,15 @@
               </div>
             </mat-card-header>
             <img [src]="product.image" alt="{{product.name}}" width="325px" class="mat-card-image" style="cursor: pointer;" (click)="selectProduct(product.id)">
-            <mat-card-content _ngcontent-dav-c138="" class="mat-card-content"></mat-card-content>
+            <mat-card-content _ngcontent-dav-c138="" class="mat-card-content">
+              <p>{{product.description}}</p>
+              <p>{{product.price | currency: 'KZT'}}</p>
+            </mat-card-content>
             <mat-card-actions _ngcontent-dav-c138="" class="mat-card-actions">
+              <button mat-button [class.disabled]="product.quantity < 1"
+                      [class.btn-danger]="product.quantity < 1" [class.btn-success]="product.quantity > 1">
+                {{product.quantity < 1 ? 'Not in stock': 'Add to Cart'}}</button>
+              <button mat-button> like </button>
             </mat-card-actions>
           </mat-card>
 
