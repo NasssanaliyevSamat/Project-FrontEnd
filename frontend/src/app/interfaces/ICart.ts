@@ -1,6 +1,6 @@
 import {IProduct} from './IProduct';
 
-export interface ICart{
+export interface ICartServerResponse{
   total: number;
   d: [{
     product: IProduct;
@@ -8,7 +8,7 @@ export interface ICart{
   }];
 }
 
-export interface ICartServerResponce{
+export interface ICart{
   totall: number;
   dd: [{
     id: number;

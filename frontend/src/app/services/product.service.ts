@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs';
 import {IProduct} from '../interfaces/IProduct';
-import {IServerResponce} from '../interfaces/IServerResponce';
+import {IServerResponse} from '../interfaces/IServerResponse';
 
 
 @Injectable({
@@ -17,9 +17,9 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   // tslint:disable-next-line:typedef
-  getAllProducts(numRes: number = 10): Observable<IServerResponce>
+  getAllProducts(numRes: number = 10): Observable<IServerResponse>
   {
-    return this.http.get<IServerResponce>(this.url + '/products', {
+    return this.http.get<IServerResponse>(this.url + '/products', {
       params: {
         limit: numRes.toString()
       }

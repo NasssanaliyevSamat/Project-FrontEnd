@@ -1,6 +1,6 @@
 import {IProduct} from './IProduct';
 
-export interface IServerResponce{
+export interface IServerResponse{
   count: number;
   products: IProduct[];
 }
