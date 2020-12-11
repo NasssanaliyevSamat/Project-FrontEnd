@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3198f379-a96a-465d-ab1d-170b25431b33" name="Default Changelist" comment="Add components, routes and files for prepared, downloaded theme">
+    <list default="true" id="3198f379-a96a-465d-ab1d-170b25431b33" name="Default Changelist" comment="Add free template for visual pieces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/slick-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/slick-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +25,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lTend3hd6V6h0iggbxFHk9Af7a" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -54,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607625678733</updated>
       <workItem from="1607625680324" duration="146000" />
-      <workItem from="1607626020573" duration="9048000" />
+      <workItem from="1607626020573" duration="16590000" />
     </task>
     <task id="LOCAL-00001" summary="Start frontend">
       <created>1607626128317</created>
@@ -77,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607634457031</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add free template for visual pieces">
+      <created>1607692339530</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607692339531</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +108,7 @@
     <MESSAGE value="Start frontend" />
     <MESSAGE value="Start front end" />
     <MESSAGE value="Add components, routes and files for prepared, downloaded theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add components, routes and files for prepared, downloaded theme" />
+    <MESSAGE value="Add free template for visual pieces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add free template for visual pieces" />
   </component>
 </project>

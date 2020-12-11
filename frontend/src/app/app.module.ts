@@ -11,6 +11,11 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { SuccessComponent } from './success/success.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {HttpClientModule} from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +31,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MatCardModule,
+    BrowserAnimationsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
