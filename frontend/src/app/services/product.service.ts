@@ -27,7 +27,7 @@ export class ProductService {
   }
   getOneProduct(id: number): Observable<IProduct>
   {
-    return this.http.get<IProduct>(this.url + '/products' + id);
+    return this.http.get<IProduct>(this.url + '/products/' + id);
   }
   getOneProductInOneCategory(category: string): Observable<IProduct[]>
   {

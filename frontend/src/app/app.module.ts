@@ -16,6 +16,8 @@ import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
+import {ToastrModule} from 'ngx-toastr';
+import {NgxSpinnerModule} from 'ngx-spinner';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatCardModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    ToastrModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

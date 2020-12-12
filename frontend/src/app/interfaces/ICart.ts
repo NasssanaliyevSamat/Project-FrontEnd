@@ -2,16 +2,16 @@ import {IProduct} from './IProduct';
 
 export interface ICartServerResponse{
   total: number;
-  d: [{
+  data: [{
     product: IProduct;
-    numberInCart: number;
+    numInCart: number;
   }];
 }
 
 export interface ICart{
-  totall: number;
-  dd: [{
+  total: number;
+  prodData: [{
     id: number;
-    inCount: number;
+    incart: number;
   }];
 }
