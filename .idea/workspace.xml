@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3198f379-a96a-465d-ab1d-170b25431b33" name="Default Changelist" comment="Fix some bag in cart.service.ts and add ngx-toastr for local storage">
+    <list default="true" id="3198f379-a96a-465d-ab1d-170b25431b33" name="Default Changelist" comment="realize checkout with adding data in database.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/cart.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/orders.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/orders.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/success/success.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/success/success.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/success/success.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/success/success.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607740057587</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="realize checkout with adding data in database.">
+      <created>1607756694650</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607756694650</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,13 +157,8 @@
     <MESSAGE value="Add services for cart and orders, local storage for cart service data, add product to cart method" />
     <MESSAGE value="Add methods update,delete, checkout, resetCart and add interface IOrderResponse" />
     <MESSAGE value="Fix some bag in cart.service.ts and add ngx-toastr for local storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix some bag in cart.service.ts and add ngx-toastr for local storage" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1607750593220">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1607750593220" />
+    <MESSAGE value="realize checkout with adding data in database." />
+    <option name="LAST_COMMIT_MESSAGE" value="realize checkout with adding data in database." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
