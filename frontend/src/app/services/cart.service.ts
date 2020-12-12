@@ -229,20 +229,17 @@ export class CartService {
   // tslint:disable-next-line:typedef
   CheckoutFromCart(userId: number) {
 
-    this.httpClient.post(`${this.url}orders/payment`, null).subscribe((res: { success: boolean }) => {
-      console.clear();
+    this.httpClient.post(`${this.url}/orders/payment`, null).subscribe((res: { success: boolean }) => {
 
       if (res.success) {
-
-
         this.resetServerData();
-        this.httpClient.post(`${this.url}orders/new`, {
-          userId,
+        this.httpClient.post(`${this.url}/orders/new`, {
+          userId: userId,
           products: this.cartDataClient.prodData
         }).subscribe((data: OrderConfirmationResponse) => {
 
-          this.orderService.getOneOrder(data.order_id).then(prods => { // 1 order contains some products
-            if (data.success) { // define parameters
+          this.orderService.getOneOrder(data.order_id).then(prods => {
+            if (data.success) {
               const navigationExtras: NavigationExtras = {
                 state: {
                   message: data.message,
@@ -251,8 +248,7 @@ export class CartService {
                   total: this.cartDataClient.total
                 }
               };
-              // this.spinner.hide().then();
-              this.router.navigate(['/thankyou'], navigationExtras).then(p => {
+              this.router.navigate(['/success'], navigationExtras).then(p => {
                 this.cartDataClient = {prodData: [{incart: 0, id: 0}], total: 0};
                 this.cartTotal$.next(0);
                 localStorage.setItem('cart', JSON.stringify(this.cartDataClient));
@@ -262,14 +258,13 @@ export class CartService {
 
         });
       } else {
-        // this.spinner.hide().then();
         this.router.navigateByUrl('/checkout').then();
-        // this.toast.error(`Sorry, failed to book the order`, 'Order Status', {
-        //   timeOut: 1500,
-        //   progressBar: true,
-        //   progressAnimation: 'increasing',
-        //   positionClass: 'toast-top-right'
-        // });
+        this.toast.error(`Sorry, failed to book the order`, 'Order Status', {
+          timeOut: 1500,
+          progressBar: true,
+          progressAnimation: 'increasing',
+          positionClass: 'toast-top-right'
+        });
       }
     });
   }

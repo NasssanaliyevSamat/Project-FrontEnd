@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3198f379-a96a-465d-ab1d-170b25431b33" name="Default Changelist" comment="Add methods update,delete, checkout, resetCart and add interface IOrderResponse">
+    <list default="true" id="3198f379-a96a-465d-ab1d-170b25431b33" name="Default Changelist" comment="Fix some bag in cart.service.ts and add ngx-toastr for local storage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/interfaces/ICart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/interfaces/ICart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/cart/cart.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/checkout/checkout.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/services/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/cart.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/orders.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/orders.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/success/success.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/success/success.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/success/success.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/success/success.component.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../frontend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,6 +57,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
     <property name="ts.external.directory.path" value="C:\Users\User\WebstormProjects\ProjectFrontEnd\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -61,7 +70,8 @@
       <option name="presentableId" value="Default" />
       <updated>1607625678733</updated>
       <workItem from="1607625680324" duration="146000" />
-      <workItem from="1607626020573" duration="48867000" />
+      <workItem from="1607626020573" duration="57592000" />
+      <workItem from="1607750561660" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="Start frontend">
       <created>1607626128317</created>
@@ -119,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607729653611</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix some bag in cart.service.ts and add ngx-toastr for local storage">
+      <created>1607740057585</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607740057587</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +152,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start frontend" />
@@ -145,6 +163,17 @@
     <MESSAGE value="Add get methods for single product and single product from same category? ICart, ICartServer, IProduct, IServerResponce" />
     <MESSAGE value="Add services for cart and orders, local storage for cart service data, add product to cart method" />
     <MESSAGE value="Add methods update,delete, checkout, resetCart and add interface IOrderResponse" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add methods update,delete, checkout, resetCart and add interface IOrderResponse" />
+    <MESSAGE value="Fix some bag in cart.service.ts and add ngx-toastr for local storage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix some bag in cart.service.ts and add ngx-toastr for local storage" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1607750593220">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1607750593220" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
